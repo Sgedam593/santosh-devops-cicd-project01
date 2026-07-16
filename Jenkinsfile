@@ -21,6 +21,17 @@ pipeline {
                 sh 'pwd'
             }
         }
+        stage('List Files') {
+            steps {
+               sh 'ls -la'
+            }
+        }
+
+        stage('Docker Images') {
+             steps {
+               sh 'docker images'
+            }
+        }
 
     }
 
