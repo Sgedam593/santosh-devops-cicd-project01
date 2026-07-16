@@ -32,6 +32,11 @@ pipeline {
                sh 'docker images'
             }
         }
+        stage('Docker Build') {
+             steps {
+               sh 'docker build -t santosh-devops:v2 .'
+            }
+        }
 
     }
 
